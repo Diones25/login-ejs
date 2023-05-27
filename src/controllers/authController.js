@@ -43,7 +43,7 @@ const loginPost = async (req, res) => {
   }
 
   req.session.userid = user.id;
-  console.log("Id do usuário ==> ",user.id)
+  console.log("Id do usuário ==> ",req.session.userid)
   req.flash('message', 'Login realizado com sucesso!')
 
   req.session.save(() => {
